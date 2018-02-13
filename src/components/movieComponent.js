@@ -47,50 +47,84 @@ class Movie extends Component {
 
         return year;
     }
+
     render() {
-        console.log('asdaw', this.state.movies);
+        const a = this.state.movies;
+        console.log('asdaw', a);
 
         if (this.props.tag === 'all') {
-            this.show = this.movieDataFullList(this.state.movies);
+            {this.show = this.movieDataFullList(a).map(movie =>
+                // console.log(movie)
+                <div id={movie._id} key={movie._id}>
+                    <img src={movie.Poster} alt={movie.Title} />
+                    <p>
+                        <em>Country</em> {movie.Country}
+                    </p>
+                    <p>
+                        <em>Genre</em> {movie.Genre}
+                    </p>
+                    <p>
+                        <em>Language</em> {movie.Language}
+                    </p>
+                    <p>
+                        <em>Runtime</em> {movie.Runtime}
+                    </p>
+                    <p>
+                        <em>Title</em> {movie.Title}
+                    </p>
+                    <p>
+                        <em>Type</em> {movie.Type}
+                    </p>
+                    <p>
+                        <em>Year</em> {movie.Year}
+                    </p>
+                    <p>
+                        <em>Rating</em> {movie.imdbRating}
+                    </p>
+                    <p>
+                        <em>Votes</em> {movie.imdbVotes}
+                    </p>
+                </div>
+            )}
         } else if (this.props.tag === 'recent') {
-            this.show = this.movieDataRecent(this.state.movies);
-        }
+            {this.show = this.movieDataRecent(a).map(movie =>
+                // console.log(movie)
+                <div id={movie._id} key={movie._id}>
+                    <img src={movie.Poster} alt={movie.Title} />
+                    <p>
+                        <em>Country</em> {movie.Country}
+                    </p>
+                    <p>
+                        <em>Genre</em> {movie.Genre}
+                    </p>
+                    <p>
+                        <em>Language</em> {movie.Language}
+                    </p>
+                    <p>
+                        <em>Runtime</em> {movie.Runtime}
+                    </p>
+                    <p>
+                        <em>Title</em> {movie.Title}
+                    </p>
+                    <p>
+                        <em>Type</em> {movie.Type}
+                    </p>
+                    <p>
+                        <em>Year</em> {movie.Year}
+                    </p>
+                    <p>
+                        <em>Rating</em> {movie.imdbRating}
+                    </p>
+                    <p>
+                        <em>Votes</em> {movie.imdbVotes}
+                    </p>
+                </div>
+            )}
+        } 
 
         return (
             <div>
-                {this.show.map(movie =>
-                    // console.log(movie)
-                    <div id={movie._id} key={movie._id}>
-                        <img src={movie.Poster} alt={movie.Title} />
-                        <p>
-                            <em>Country</em> {movie.Country}
-                        </p>
-                        <p>
-                            <em>Genre</em> {movie.Genre}
-                        </p>
-                        <p>
-                            <em>Language</em> {movie.Language}
-                        </p>
-                        <p>
-                            <em>Runtime</em> {movie.Runtime}
-                        </p>
-                        <p>
-                            <em>Title</em> {movie.Title}
-                        </p>
-                        <p>
-                            <em>Type</em> {movie.Type}
-                        </p>
-                        <p>
-                            <em>Year</em> {movie.Year}
-                        </p>
-                        <p>
-                            <em>Rating</em> {movie.imdbRating}
-                        </p>
-                        <p>
-                            <em>Votes</em> {movie.imdbVotes}
-                        </p>
-                    </div>
-                )}
+                {this.show}
             </div>
 
         );
