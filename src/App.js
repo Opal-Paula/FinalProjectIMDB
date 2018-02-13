@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Movie from "./components/movieComponent";
-import MoviesList from "./components/moviesListComponent";
+import MoviesListRecent from "./components/moviesListComponent";
 import MovieSearchList from "./components/movieSearchListComponent";
 
 class App extends Component {
@@ -10,9 +9,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
-          {/* <Route exact={true} path="/" component={MoviesList} /> */}
-          {/* <Route exact path="/search" component={MovieSearchList} />    */}
-          <Movie tag="all" />
+          <Route exact={true} path="/" component={MoviesListRecent} />
+          <Route exact path="/search" component={MovieSearchList} />   
+          
         </div>
       </BrowserRouter>
     );
