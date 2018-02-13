@@ -24,6 +24,9 @@ class Register extends React.Component{
                         <label for="re-enter-password-field">Re-enter password</label>
                         <input type="text" maxlength="50" id="re-enter-password-field" tabindex="4"/>
                     </div>
+                    <div class="fifth-row">
+                        <button tabindex="5">Create Account</button>
+                    </div>
                 </form>
             </div>
         )
