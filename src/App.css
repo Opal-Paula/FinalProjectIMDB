@@ -1,28 +1,72 @@
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
+  background-color: #D8DDEB;
+  padding: 10px;
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.app {
+  width: 960px;
+  margin: 0 auto;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+p {
+  margin-bottom: 15px;
 }
 
-.App-intro {
-  font-size: large;
+.imdb-Logo {
+  position: relative;
+  left: 3em;
+  top: 0.4em;
+  width: 10em;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.txt_input {
+  border-color: #FFFFFF #327CB5 #327CB5 #FFFFFF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 3px #333333;
+  position: relative;
+  margin: auto;
+  padding: 5px;
+  bottom: 20px;
+  width: 35em;
+  height: 3.2em;
+}
+
+.input-container {
+  display: inline-block;
+  position: relative;
+  left: 13.500em;
+}
+
+
+div.input-img {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF #327CB5 #327CB5 #FFFFFF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 3px #333333;
+  position: relative;
+  display: inline-block;
+  right: 504px;
+  height: 2.73em;
+  bottom: 25px;
+  width: 35px;
+}
+
+img.input-img {
+  position: relative;
+  width: 20px;
+  top: 10px;
+  left: 7px;
 }
