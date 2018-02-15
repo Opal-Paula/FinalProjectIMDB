@@ -1,7 +1,16 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import {MOVIE_DATA} from "./types";
+import axios from 'axios';
 
+export function movieAction(data = '') {
+    const url =
+    'http://localhost:8000/movies';
+    console.log('action',`${url}${data}`);
+    const result = axios.get(`${url}${data}`);
 
+    //console.log('action',result);
+
+    return {
+        type: MOVIE_DATA,
+        payload: result
+    }
+}
