@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+  background-color: #D8DDEB;
+  padding: 10px;
+  
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.imdb-Logo {
+  position: relative;
+  left: 3em;
+  top: 0.4em;
+  width: 10em;
+}
+
+.txt_input {
+  border-color: #FFFFFF #327CB5 #327CB5 #FFFFFF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 3px #333333;
+  position: relative;
+  margin: auto;
+  padding: 5px;
+  bottom: 20px;
+  width: 35em;
+  height: 3.2em;
+}
+
+.input-container {
+  display: inline-block;
+  position: relative;
+  left: 13.500em;
+}
+
+
+div.input-img {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF #327CB5 #327CB5 #FFFFFF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 3px #333333;
+  position: relative;
+  display: inline-block;
+  right: 504px;
+  height: 2.73em;
+  bottom: 25px;
+  width: 35px;
+}
+
+img.input-img {
+  position: relative;
+  width: 20px;
+  top: 10px;
+  left: 7px;
+}
