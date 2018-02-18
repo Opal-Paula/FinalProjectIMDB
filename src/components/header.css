@@ -1,0 +1,25 @@
+nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #4EA5D9;
+    margin-bottom: 30px;
+    margin-top:10px;
+    padding: 3px 7px;
+    border-radius: 5px;
+
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+
+nav ul li a {
+    color: #122C34;
+    text-decoration: none;
+    /* font-family: Verdana; */
+}
+
+.link-button:hover {
+    color:#AED6ED;
+}
