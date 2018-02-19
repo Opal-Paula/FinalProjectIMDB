@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Movie from "./movieComponent";
+import MovieList from "./movieListComponent";
 
 class MoviesListRecent extends Component {
     render() {
         return (
             <div className="container">
-                <h1>Home, top 10 recent movies</h1>
-                <Movie tag="recent" />
+                <h1>Top 10 recent movies</h1>
+                <MovieList tag="recent" />
             </div>            
         );
     }

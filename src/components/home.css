@@ -1,0 +1,24 @@
+.carousel-inner .carousel-item {
+    /* width: 1000px; */
+    background-color: #000;
+    min-height: 450px;
+}
+.row-movies-recent {
+    min-height: 450px;
+}
+.carousel-inner .carousel-caption {
+    bottom: 0;
+    top: 20%;
+}
+.add-recent {
+    position: absolute;
+    top: 70%;
+    z-index: 10;
+    width: 100%;
+}
+.btn-details {
+    position: absolute;
+    top: 60%;
+    z-index: 10;
+    width: 100%;
+}

@@ -1,16 +1,26 @@
-import {MOVIE_DATA} from "./types";
+import {MOVIE_DATA_RECENT} from "./types";
 import axios from 'axios';
 
 export function movieAction(data = '') {
+    console.log('daaaata', data);
     const url =
     'http://localhost:8000/movies';
-    console.log('action',`${url}${data}`);
-    const result = axios.get(`${url}${data}`);
+    
+    let query = '';
+    let type = '';
+    if (data === 'recent') {
+        query = '?take=40';
+        type = MOVIE_DATA_RECENT;
+    }
+
+
+    console.log('action',`${url}${query}`);
+    const result = axios.get(`${url}${query}`);
 
     //console.log('action',result);
 
     return {
-        type: MOVIE_DATA,
+        type: type,
         payload: result
     }
 }

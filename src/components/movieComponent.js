@@ -170,7 +170,7 @@ class Movie extends Component {
         return (
             <Row>
                 {this.show}
-                <Example items={items} />
+                {/* <Example items={items} /> */}
 
             </Row>
 
