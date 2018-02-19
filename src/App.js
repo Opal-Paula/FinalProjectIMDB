@@ -9,11 +9,7 @@ import './App.css';
 import logo from './logo.png';
 import Lupa from './lupa.png';
 
-import MoviesListRecent from "./components/moviesListComponent";
-import MovieSearchList from "./components/movieSearchListComponent";
-import AuthExample from "./components/authComponent";
-import { Example } from "./components/carousel";
-
+import MoviesListRecent from "./components/moviesListRecentComponent";
 
 class App extends React.Component {
   render() {
@@ -34,10 +30,7 @@ class App extends React.Component {
 
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-
           <Route exact={true} path="/" component={MoviesListRecent} />
-          <Route exact path="/search" component={MovieSearchList} />
-          <Route exact path="/auth" component={AuthExample} />
         </div>
       </BrowserRouter>
     ]);

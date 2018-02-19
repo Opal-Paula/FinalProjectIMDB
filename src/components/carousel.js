@@ -70,8 +70,8 @@ class CarouselMovie extends Component {
                         </Col>
                         <Col lg="4">
                             <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
-                            <Button color="secondary" data-id={item.id} className="btn-details">Details</Button>
-                            <Button color="primary" data-id={item.id} className="add-recent">Add to collection</Button>
+                            <Button color="secondary" data-id={item.id} className="btn-mv btn-details">Details</Button>
+                            <Button color="primary" data-id={item.id} className="btn-mv add-recent">Add to collection</Button>
                         </Col>
                     </Row>
                 </CarouselItem>

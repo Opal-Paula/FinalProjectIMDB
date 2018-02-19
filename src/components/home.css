@@ -4,21 +4,21 @@
     min-height: 450px;
 }
 .row-movies-recent {
+    justify-content: center;
     min-height: 450px;
 }
 .carousel-inner .carousel-caption {
     bottom: 0;
     top: 20%;
 }
-.add-recent {
+.btn-mv {
     position: absolute;
-    top: 70%;
     z-index: 10;
-    width: 100%;
+    width: calc(100% - 30px);
+} 
+.add-recent {
+    top: 70%;
 }
 .btn-details {
-    position: absolute;
     top: 60%;
-    z-index: 10;
-    width: 100%;
 }
