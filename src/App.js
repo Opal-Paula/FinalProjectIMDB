@@ -9,6 +9,7 @@ import './App.css';
 import logo from './logo.png';
 import Lupa from './lupa.png';
 
+import MoviesListRecent from "./components/moviesListRecentComponent";
 
 
 class App extends React.Component {
@@ -25,6 +26,8 @@ class App extends React.Component {
             {/* <span className="input-img"></span> */}
             <img src={ Lupa } alt="magnifyingGlass" className="input-img"/>
           </div>
+          
+          
         </div>
         <Link to="/register" component={ Register }>
           <div className="div-reg-btn">
@@ -37,9 +40,9 @@ class App extends React.Component {
           </div>
         </Link>
         <Header />
-        
         <Route exact path="/register" component={ Register }/>
         <Route exact path="/login" component={ Login }/>
+        <Route exact={true} path="/" component={MoviesListRecent} />
       </div>
       </BrowserRouter>
     ]);

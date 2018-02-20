@@ -1,0 +1,25 @@
+.carousel-inner .carousel-item {
+    /* width: 1000px; */
+    background-color: #7b7979;
+    border-radius: 5px;  
+    min-height: 450px;
+}
+.row-movies-recent {
+    justify-content: center;
+    min-height: 450px;
+}
+.carousel-inner .carousel-caption {
+    bottom: 0;
+    top: 20%;
+}
+.btn-mv {
+    position: absolute;
+    z-index: 10;
+    width: calc(100% - 30px);
+} 
+.add-recent {
+    top: 70%;
+}
+.btn-details {
+    top: 60%;
+}
