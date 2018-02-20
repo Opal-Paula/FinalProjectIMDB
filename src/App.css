@@ -1,21 +1,22 @@
 html {
-  box-sizing: border-box;
   background-color: #D8DDEB;
   padding: 10px;
+  overflow: hidden;
   
 }
 
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
-}
+} */
 
-.app {
+/* .app {
+  max-height: 100%;
   width: 960px;
   margin: 0 auto;
   padding: 20px;
-}
+} */
 
 p {
   margin-bottom: 15px;
@@ -26,6 +27,17 @@ p {
   left: 3em;
   top: 0.4em;
   width: 10em;
+  vertical-align: unset;
+}
+
+.input-container {
+  display: inline-block;
+  position: relative;
+  left: 13.500em;
+  min-height: 0%;
+  min-width: 0%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .txt_input {
@@ -34,19 +46,19 @@ p {
   border-style: solid;
   border-width: 1px;
   box-shadow: 1px 1px 3px #333333;
+  font-size: 14px;
   position: relative;
   margin: auto;
   padding: 5px;
   bottom: 20px;
-  width: 35em;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 35em;
   height: 3.2em;
+  text-indent: 5px;
 }
 
-.input-container {
-  display: inline-block;
-  position: relative;
-  left: 13.500em;
-}
+
 
 
 div.input-img {
@@ -58,15 +70,52 @@ div.input-img {
   box-shadow: 1px 1px 3px #333333;
   position: relative;
   display: inline-block;
-  right: 504px;
-  height: 2.73em;
-  bottom: 25px;
+  right: 529px;
+  height: 46px;
+  bottom: 28px;
   width: 35px;
+
 }
 
 img.input-img {
+  min-height: 0%;
+  min-width: 0%;
+  max-height: 100%;
+  max-width: 100%;
   position: relative;
   width: 20px;
   top: 10px;
   left: 7px;
+  vertical-align: unset;
+  border-style: none;
+}
+
+
+div.div-reg-btn, div.div-login-btn {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  left: 270px;
+  top: 6px;
+  
+}
+
+span.reg-btn-img, span.login-btn-img {
+  display: flex;
+  background-image: url("account.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  height: 50px;
+}
+
+div.div-login-btn {
+  left: 275px;
+}
+
+span.login-btn-img {
+  background-image: url("./login.svg");
+  background-color: #327CB5;
+  /* -webkit-mask:  url("login.svg") no-repeat 100% 100%; */
+  /* mask: url("login.svg") no-repeat 100% 100%; */
 }
