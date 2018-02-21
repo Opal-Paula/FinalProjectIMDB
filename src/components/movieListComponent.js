@@ -9,6 +9,7 @@ class MovieList extends Component {
     constructor(props) {
         super(props);
 
+        //switch case all , recent, paged = default
         this.show = '';
         if (props.tag === 'all') {
             this.show = 'all';

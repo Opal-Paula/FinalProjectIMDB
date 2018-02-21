@@ -8,6 +8,7 @@ export function movieAction(data = '') {
     
     let query = '';
     let type = '';
+    //can use switch
     if (data === 'recent') {
         query = '?take=40';
         type = MOVIE_DATA_RECENT;
