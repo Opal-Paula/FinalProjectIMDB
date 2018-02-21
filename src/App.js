@@ -10,6 +10,7 @@ import logo from './logo.png';
 import Lupa from './lupa.png';
 
 import MoviesListRecent from "./components/moviesListRecentComponent";
+import { MovieSearchList } from "./components/searchComponent";
 
 class App extends React.Component {
   render() {
@@ -28,9 +29,10 @@ class App extends React.Component {
           </div>
           <Header />
 
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
           <Route exact={true} path="/" component={MoviesListRecent} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />          
+          <Route exact path="/searchpage" component={MovieSearchList} />
         </div>
       </BrowserRouter>
     ]);

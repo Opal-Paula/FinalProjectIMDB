@@ -11,6 +11,9 @@ html {
     margin: 0;
 }
 
+#root {min-height: 750px;}
+.container {padding: 15px 15px 35px;}
+
 .app {
     width: 960px;
     margin: 0 auto;

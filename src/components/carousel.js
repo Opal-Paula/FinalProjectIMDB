@@ -10,8 +10,6 @@ import {
     Button
 } from 'reactstrap';
 
-import "./home.css";
-
 class CarouselMovie extends Component {
     constructor(props) {
         super(props);
@@ -54,21 +52,20 @@ class CarouselMovie extends Component {
                 <div>Loading ...</div>
             );
         }
-
-        console.log('exwd', this.props, this.props.items);
+        
         const { activeIndex } = this.state;
         const slides = this.props.items.map((item) => {
             return (
                 <CarouselItem
                     onExiting={this.onExiting}
                     onExited={this.onExited}
-                    key={item.src}
+                    key={item.id}
                 >
                     <Row className="row-movies-recent">
-                        <Col lg="4">
-                            <img src={item.src} alt={item.altText} />
+                        <Col sm="4" md="6" lg="4">
+                            <img className="poster" src={item.src} alt={item.altText} />
                         </Col>
-                        <Col lg="4">
+                        <Col sm="4" md="4" lg="4">
                             <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
                             <Button color="secondary" data-id={item.id} className="btn-mv btn-details">Details</Button>
                             <Button color="primary" data-id={item.id} className="btn-mv add-recent">Add to collection</Button>

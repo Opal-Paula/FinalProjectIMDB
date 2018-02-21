@@ -4,26 +4,22 @@ import { bindActionCreators } from "redux";
 
 import { movieAction } from "../actions";
 import { CarouselMovie } from "./carousel";
+import { MovieSearchListShow } from "./searchComponent";
 
 class MovieList extends Component {
     constructor(props) {
         super(props);
-
-        //switch case all , recent, paged = default
-        this.show = '';
-        if (props.tag === 'all') {
-            this.show = 'all';
-        } else if (props.tag === 'recent') {
-            this.show = 'recent';
-        } else {
-            this.show = 'paged';
+        switch (props.tag) {
+            case 'all':
+                this.show = 'all';
+                break;
+            case 'recent':
+                this.show = 'recent';
+                break;
+            default:
+                this.show = 'paged';
+                this.rendered = <p>No movies here!</p>;
         }
-
-
-        // this.urlQuery = '';
-        // if ((props.tag === 'all') || (props.tag === 'recent')) {
-        //     this.urlQuery = '?take=40';
-        // } 
     }
     componentDidMount() {
         this.props.movieAction(this.show);
@@ -36,9 +32,35 @@ class MovieList extends Component {
         let items = this.props.movies.map(
             movie => ({ src: movie.Poster, altText: movie.Title, caption: movie.Genre, id: movie._id })
         );
+        let movieDataGeneral = this.props.movies.map(
+            movie => ({ 
+                poster: movie.Poster, 
+                title: movie.Title, 
+                rating: movie.imdbRating, 
+                id: movie._id, 
+                country: movie.Country,
+                genre: movie.Genre,
+                lang: movie.Language,
+                runtime: movie.Runtime,
+                type: movie.Type,
+                year: movie.Year,
+                votes: movie.imdbVotes
+             })
+        );
+        switch (this.props.tag) {
+            case 'all':
+                this.rendered = <MovieSearchListShow movie={movieDataGeneral} />;
+                break;
+            case 'recent':
+                this.rendered = <CarouselMovie items={items} />;
+                break;
+            default:
+                this.show = 'paged';
+                this.rendered = <p>No movies here!</p>;
+        }
         return (
             <div>
-                <CarouselMovie items={items} />
+                {this.rendered}
             </div>
         );
     }
