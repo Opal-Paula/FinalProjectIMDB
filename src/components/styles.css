@@ -1,0 +1,17 @@
+.progress {margin-bottom: 10px;}
+.info {margin-bottom: 5px;}
+.em {    
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.em::after {
+    content: ':';
+}
+
+@media (min-width: 992px) {
+    .img-search {min-height: 350px;}
+}
+@media (max-width: 991px) and (min-width: 576px) {
+    .img-search {min-height: 500px;}
+}
