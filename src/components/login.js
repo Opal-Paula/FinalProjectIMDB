@@ -1,25 +1,22 @@
 import React from 'react';
 
-import './login.css';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 
 class Login extends React.Component{
     render() {
         return(
             <div class="container-for-login">
-                <form>
-                    <h1>Sign in</h1>
-                    <div class="first-row">
-                        <label for="email-field">Email</label>
-                        <input type="text" maxlength="50" id="email-field" tabindex="1"/>
-                    </div>
-                    <div class="second-row">
-                        <label for="password-field">Password</label>
-                        <input type="text" maxlength="50" id="password-field" tabindex="2"/>
-                    </div>
-                    <div class="third-row">
-                        <button tabindex="3">Sign in</button>
-                    </div>
-                </form>
+                <Form>
+                    <FormGroup>
+                        <Label for="exampleEmail">Email</Label>
+                        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="examplePassword">Password</Label>
+                        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                    </FormGroup>
+                </Form>
             </div>
         )
     }
