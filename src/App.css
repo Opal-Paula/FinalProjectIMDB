@@ -10,12 +10,14 @@ html {
   margin: 0;
 } */
 
-/* .app {
-  max-height: 100%;
-  width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-} */
+#root {min-height: 750px;}
+.container {padding: 15px 15px 35px;}
+
+.app {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 p {
     margin-bottom: 15px;
