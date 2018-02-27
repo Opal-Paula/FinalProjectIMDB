@@ -1,6 +1,7 @@
 import { MOVIE_DATA_RECENT, MOVIE_DATA_ALL, MOVIE_DATA_PAGED } from "./types";
 import axios from 'axios';
 
+
 export function movieAction(data = '') {
     console.log('daaaata', data);
     const url =
@@ -29,6 +30,25 @@ export function movieAction(data = '') {
 
     return {
         type: type,
+        payload: result
+    }
+}
+
+export function movieDetails(id) {
+    console.log('movie', id);
+    const url =
+        'http://localhost:8000/movies/';
+
+    
+    let type = 'MOVIE_DETAILS';
+   
+    const result = axios.get(`${url}${id}`);
+
+
+    console.log('action',result);
+
+    return {
+        type: 'MOVIE_DETAILS',
         payload: result
     }
 }

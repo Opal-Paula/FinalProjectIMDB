@@ -5,6 +5,7 @@ import Header from './components/header';
 import Main from './components/main';
 import Register from './components/register';
 import Login from './components/login';
+import MovieDetails from './components/movieDetails';
 import './App.css';
 import logo from './logo.png';
 import Lupa from './lupa.png';
@@ -30,9 +31,10 @@ class App extends React.Component {
           <Header />
 
           <Route exact={true} path="/" component={MoviesListRecent} />
-          {/* <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />           */}
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />          
           <Route exact path="/searchpage" component={MovieSearchList} />
+          <Route exact path="/movieDetails" component={MovieDetails} />  
         </div>
       </BrowserRouter>
     ]);
