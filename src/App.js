@@ -7,21 +7,11 @@ import Register from './components/register';
 import Login from './components/login';
 import './App.css';
 import logo from './logo.png';
-import Lupa from './lupa.png';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+// import Lupa from './lupa.png';
 
-import MoviesListRecent from "./components/moviesListRecentComponent";
-import { MovieSearchList } from "./components/searchComponent";
-
-
-import fontawesome from '@fortawesome/fontawesome'
-import faUser from '@fortawesome/fontawesome-free-solid/faUser'
-import faCircle from '@fortawesome/fontawesome-free-regular/faCircle'
-import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
-
-fontawesome.library.add(faUser)
-fontawesome.library.add(faCircle)
-fontawesome.library.add(faFacebook)
+import SearchBar from "./components/searchBar";
+import MoviesListRecent from "./components/moviesListRecent";
+import MovieSearchList from "./components/searchAllListedMovies";
 
 
 
@@ -36,32 +26,21 @@ class App extends React.Component {
                 <img src={logo} alt="websiteLogo" class="imdb-Logo"/>
                </Link> 
             </div>
-            <div className="col-8"> 
-              <div className="input-group mx-auto w-75 pt-3 mt-1 ">
-                <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
-                  <div className="input-group-append">
-                    <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</button>
-                      <div className="dropdown-menu">
-                        <a className="dropdown-item" href="#">AAA</a>
-                        <a className="dropdown-item" href="#">BBB</a>
-                        <a className="dropdown-item" href="#">CCC</a>
-                        <div role="separator" className="dropdown-divider"></div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <div className="col-1 mx-auto w-75 pt-3 mt-1">
+             
+            <SearchBar /> 
+            
+            <div className="col-1 mx-auto w-75 pt-4 mt-1">
               <Link to="/register" component={ Register }>
                 <div className="div-reg-btn">
-                  <i className="fab fa-500px" data-toggle="tooltip" title="Register"></i>
+                  <i className="fab fa-500px" data-toggle="tooltip" title="Register">Register</i>
                   {/* <span className="reg-btn-img" ></span> */}
                 </div>
               </Link>
             </div>
-            <div className="col-1 mx-auto w-75 pt-3 mt-1">  
+            <div className="col-1 mx-auto w-75 pt-4 mt-1">  
               <Link to="/login" component={ Login }>
                 <div className="div-login-btn">
-                  <i className="far fa-user-circle" data-toggle="tooltip" title="Login"></i>
+                  <i className="far fa-user-circle" data-toggle="tooltip" title="Login">Login</i>
                   {/* <span className="login-btn-img" ></span> */}
                 </div>
               </Link>

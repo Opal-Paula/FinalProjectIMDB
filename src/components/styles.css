@@ -5,13 +5,25 @@
     font-weight: bold;
     margin-right: 5px;
 }
-.em::after {
-    content: ':';
-}
+.em::after {content: ':';}
+.btn {margin: 3px 0; width: 100%;}
 
 @media (min-width: 992px) {
     .img-search {min-height: 350px;}
 }
 @media (max-width: 991px) and (min-width: 576px) {
     .img-search {min-height: 500px;}
+}
+
+.search_input, .select-search-option {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.search_input {
+    padding: 10px;
+}
+
+.select-search-option {
+    padding: 3px;
 }
