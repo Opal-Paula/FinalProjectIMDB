@@ -8,10 +8,10 @@ import Login from './components/login';
 import MovieDetails from './components/movieDetails';
 import './App.css';
 import logo from './logo.png';
-import Lupa from './lupa.png';
 
-import MoviesListRecent from "./components/moviesListRecentComponent";
-import { MovieSearchList } from "./components/searchComponent";
+import SearchBar from "./components/searchBar";
+import MoviesListRecent from "./components/moviesListRecent";
+import MovieSearchList from "./components/searchAllListedMovies";
 
 class App extends React.Component {
   render() {
@@ -21,13 +21,7 @@ class App extends React.Component {
           <Link to="/" className="link-button">
             <img src={logo} alt="websiteLogo" className="imdb-Logo" />
           </Link>
-
-          <div className="input-container">
-            <input type="text" placeholder="Search a movie" id="txt-input" className="txt_input" />
-            <div className="input-img">
-              <img src={Lupa} alt="magnifyingGlass" className="input-img" />
-            </div>
-          </div>
+          <SearchBar />
           <Header />
 
           <Route exact={true} path="/" component={MoviesListRecent} />

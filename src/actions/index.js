@@ -1,14 +1,11 @@
-import { MOVIE_DATA_RECENT, MOVIE_DATA_ALL, MOVIE_DATA_PAGED } from "./types";
+import { MOVIE_DATA_RECENT, MOVIE_DATA_ALL, MOVIE_DATA_PAGED, SEARCH_TITLE } from "./types";
 import axios from 'axios';
 
+const url = 'http://localhost:8000/movies';
 
 export function movieAction(data = '') {
-    console.log('daaaata', data);
-    const url =
-        'http://localhost:8000/movies';
-
-    let query = '';
-    let type = '';
+    console.log('daaaata', data);    
+    let query = '', type = '';
     switch (data) {
         case 'recent':
             type = MOVIE_DATA_RECENT;
@@ -22,12 +19,7 @@ export function movieAction(data = '') {
             type = MOVIE_DATA_PAGED;
             query = '';
     }
-
-    console.log('action', `${url}${query}`);
     const result = axios.get(`${url}${query}`);
-
-    //console.log('action',result);
-
     return {
         type: type,
         payload: result
@@ -49,6 +41,16 @@ export function movieDetails(id) {
 
     return {
         type: 'MOVIE_DETAILS',
+        payload: result
+    }
+}
+
+export function searchMovieAction(type, data) {
+    console.log(data);
+    const result = axios.get(`${url}`+'?take=40');
+    // console.log('result',result);
+    return {
+        type: [type, data],
         payload: result
     }
 }

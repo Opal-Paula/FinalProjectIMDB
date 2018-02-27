@@ -1,27 +1,13 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 
-import MovieList from "./movieListComponent";
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button,
-    Row, Col, CardFooter, Progress, CardHeader
+    Card, CardImg, 
+    CardHeader, CardBody, CardFooter,
+    CardTitle, Button,
+    Row, Progress
 } from 'reactstrap';
-import "./styles.css";
 
-class MovieSearchList extends Component {
-    render() {
-        return (
-            <div className="container">
-                <h1 className="text-center">Search list</h1>
-                <MovieList tag="all" />
-            </div>
-        );
-    }
-
-}
-
-class MovieSearchListShow extends Component {
+class Movie extends Component {
     constructor(props) {
         super(props);
         console.log('search', props, props.movie.poster);
@@ -84,7 +70,6 @@ class MovieSearchListShow extends Component {
             <Row className="row-movies-search">{moviesData}</Row>
         );
     }
-
 }
 
-export { MovieSearchList, MovieSearchListShow };
+export default Movie;

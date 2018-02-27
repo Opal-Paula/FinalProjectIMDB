@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 
 import { movieAction } from "../actions";
 import  CarouselMovie  from "./carousel";
-import { MovieSearchListShow } from "./searchComponent";
+import Movie from "./movie";
 
 class MovieList extends Component {
     constructor(props) {
@@ -49,7 +49,7 @@ class MovieList extends Component {
         );
         switch (this.props.tag) {
             case 'all':
-                this.rendered = <MovieSearchListShow movie={movieDataGeneral} />;
+                this.rendered = <Movie movie={movieDataGeneral} />;
                 break;
             case 'recent':
                 this.rendered = <CarouselMovie items={items} />;
@@ -67,12 +67,10 @@ class MovieList extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    // console.log('dd',dispatch, {movie})
     return bindActionCreators({ movieAction }, dispatch);
 }
 
 function mapStateToProps(state) {
-    console.warn('State', state);
     return {
         movies: state.movies
     };
