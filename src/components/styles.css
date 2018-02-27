@@ -5,9 +5,8 @@
     font-weight: bold;
     margin-right: 5px;
 }
-.em::after {
-    content: ':';
-}
+.em::after {content: ':';}
+.btn {margin: 3px 0; width: 100%;}
 
 @media (min-width: 992px) {
     .img-search {min-height: 350px;}

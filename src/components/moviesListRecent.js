@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import MovieList from "./movieListComponent";
+import MovieList from "./movieList";
 import "./home.css";
 
 class MoviesListRecent extends Component {
