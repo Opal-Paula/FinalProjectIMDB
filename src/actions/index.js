@@ -32,6 +32,7 @@ export function searchMovieAction(type, data) {
     // console.log('result',result);
     return {
         type: [type, data],
-        payload: result
+        payload: result,
+        meta: data
     }
 }
