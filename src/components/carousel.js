@@ -9,9 +9,9 @@ import {
     Row,
     Button
 } from 'reactstrap';
-import { movieDetails } from "../actions";
-import { bindActionCreators } from "redux";
-import {connect} from 'react-redux';
+
+
+import DetailsButton from "./detailsBtn";
 
 class CarouselMovie extends Component {
     constructor(props) {
@@ -47,15 +47,7 @@ class CarouselMovie extends Component {
     goToIndex(newIndex) {
         if (this.animating) return;
         this.setState({ activeIndex: newIndex });
-    }
-    handleClick = (e) => {
-        console.log(e.target.getAttribute("data-id"));
-        this.props.movieDetails(e.target.getAttribute("data-id"));
-
-        // this.props.selectMovie(this.props.movie);
-        // window.location = 'detail.html?id=' + e.target.getAttribute('data-id');
-    }
-   
+    }  
 
     render() {
         if (!this.props.items) {
@@ -63,7 +55,6 @@ class CarouselMovie extends Component {
                 <div>Loading ...</div>
             );
         }
-        // let a = this.props.details.map(value => (console.log(value)));
         const { activeIndex } = this.state;
         const slides = this.props.items.map((item) => {
             return (
@@ -78,7 +69,7 @@ class CarouselMovie extends Component {
                         </Col>
                         <Col sm="4" md="4" lg="4">
                             <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
-                            <Button color="secondary" data-id={item.id} className="btn-mv btn-details" onClick={this.handleClick.bind(this)}>Details</Button>
+                            <DetailsButton item={item.id} cs={'btn-mv btn-details'} />
                             <Button color="primary" data-id={item.id} className="btn-mv add-recent">Add to collection</Button>
                         </Col>
                     </Row>
@@ -100,21 +91,6 @@ class CarouselMovie extends Component {
         );
     }
 }
-// function ceva(){
-   
-// }
-
-function mapDispatchToProps(dispatch) {
-    // console.log('dd',dispatch, {movie})
-    return bindActionCreators({ movieDetails }, dispatch);
-}
-
-function mapStateToProps(state) {
-    console.warn('State', state);
-    return {
-        details : state.details
-    };
-}
 
 
-export default connect(null, mapDispatchToProps)(CarouselMovie);
+export default CarouselMovie;

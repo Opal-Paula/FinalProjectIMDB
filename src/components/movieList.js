@@ -25,7 +25,6 @@ class MovieList extends Component {
         this.props.movieAction(this.show);
     }
     render() {
-        console.warn('Props', this.props);
         if (!this.props.movies) {
             return <div>Loading ...</div>;
         }

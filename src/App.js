@@ -10,8 +10,8 @@ import './App.css';
 import logo from './logo.png';
 
 import SearchBar from "./components/searchBar";
-import MoviesListRecent from "./components/moviesListRecent";
-import MovieSearchList from "./components/searchAllListedMovies";
+import MoviesListRecent from "./components/homepage";
+import AllMovies from "./components/allMovies";
 
 
 
@@ -47,8 +47,9 @@ class App extends React.Component {
         <Header />
         <Route exact path="/register" component={ Register }/>
         <Route exact path="/login" component={ Login }/>
-        <Route exact={true} path="/" component={MoviesListRecent} />
-        <Route exact path="/searchpage" component={MovieSearchList} />
+        <Route exact={true} path="/" component={ MoviesListRecent } />
+        <Route exact path="/movies" component={ AllMovies } />
+        <Route exact path="/movie" component={ MovieDetails } />
       </div>
       </BrowserRouter>
     ]);

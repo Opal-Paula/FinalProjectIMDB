@@ -7,10 +7,11 @@ import {
     Row, Progress
 } from 'reactstrap';
 
+import DetailsButton from "./detailsBtn";
+
 class Movie extends Component {
     constructor(props) {
         super(props);
-        console.log('search', props, props.movie.poster);
     }
     render() {
         console.log(this.props.movie.title);
@@ -59,7 +60,7 @@ class Movie extends Component {
                         </p>
                     </CardBody>
                     <CardFooter>
-                        <Button color="secondary" data-id={movie.id} className="btn-details">Details</Button>
+                        <DetailsButton item={movie.id} cs={'btn-details'} />
                         <Button color="primary" data-id={movie.id} className="add-recent">Add to collection</Button>
                     </CardFooter>
                 </Card>

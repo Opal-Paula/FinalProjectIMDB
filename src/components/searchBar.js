@@ -42,9 +42,10 @@ class SearchBar extends Component {
         this.setState({
             search: e.target.value
         })     
-        this.props.searchMovieAction(this.state.search, this.state.searchVal);     
+            
     }
-    render() {                  
+    render() {   
+        this.props.searchMovieAction(this.state.search, this.state.searchVal); 
         return (
             <div className="row col">
                 <div className="col-9 pt-3 mt-1">
