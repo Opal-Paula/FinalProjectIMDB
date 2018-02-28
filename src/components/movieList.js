@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { movieAction } from "../actions";
-import { CarouselMovie } from "./carousel";
+import  CarouselMovie  from "./carousel";
 import Movie from "./movie";
 
 class MovieList extends Component {

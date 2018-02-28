@@ -26,6 +26,25 @@ export function movieAction(data = '') {
     }
 }
 
+export function movieDetails(id) {
+    console.log('movie', id);
+    const url =
+        'http://localhost:8000/movies/';
+
+    
+    let type = 'MOVIE_DETAILS';
+   
+    const result = axios.get(`${url}${id}`);
+
+
+    console.log('action',result);
+
+    return {
+        type: 'MOVIE_DETAILS',
+        payload: result
+    }
+}
+
 export function searchMovieAction(type, data) {
     console.log(data);
     const result = axios.get(`${url}`+'?take=40');
