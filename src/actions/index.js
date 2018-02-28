@@ -1,10 +1,10 @@
 import {
-        MOVIE_DATA_RECENT,
+MOVIE_DATA_RECENT,
         MOVIE_DATA_ALL,
         MOVIE_DATA_PAGED,
         SEARCH_MOVIE,
         MOVIE_DETAILS
-}
+        }
 from "./types";
 import axios from 'axios';
 
@@ -30,7 +30,7 @@ export function movieAction(data = '') {
     return {
         type: type,
         payload: result
-}
+    }
 }
 
 export function movieDetails(id) {
@@ -46,13 +46,12 @@ export function movieDetails(id) {
     }
 }
 
-export function searchMovieAction(category='take=40', query='') {
-    console.log('cc',category, query);
+export function searchMovieAction(category = 'take=40', query = '') {
+    console.log('cc', category, query);
     const result = axios.get(`${url}?${category}=${query}`);
-     console.log('result',result, `${url}?${category}=${query}`);
+    console.log('result', result, `${url}?${category}=${query}`);
     return {
         type: SEARCH_MOVIE,
-        payload: result,
-//        meta: data
+        payload: result
     }
 }

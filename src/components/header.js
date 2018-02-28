@@ -11,8 +11,9 @@ class Header extends Component {
                         <li><Link to="/" className="link-button">Home</Link></li>
                         <li><Link to="/searchpage" className="link-button">Search Movies</Link></li>
                         <li><Link to="/movies" className="link-button">Movies</Link></li>
-                        <li><Link to="/login" className="link-button">Login</Link></li>
-                        <li><Link to="/register" className="link-button">Register</Link></li>
+                        {/* <li><Link to="/logout" className="link-button">Log out</Link></li> */}
+                        {/* <li><Link to="/login" className="link-button">Login</Link></li>
+                        <li><Link to="/register" className="link-button">Register</Link></li> */}
                     </ul>
                 </div>
             </nav>

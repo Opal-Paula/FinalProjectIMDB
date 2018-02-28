@@ -13,23 +13,43 @@ import SearchBar from "./components/searchBar";
 import MoviesListRecent from "./components/moviesListRecent";
 import MovieSearchList from "./components/searchAllListedMovies";
 
+
+
 class App extends React.Component {
   render() {
     return ([
       <BrowserRouter>
         <div className="container">
-          <Link to="/" className="link-button">
-            <img src={logo} alt="websiteLogo" className="imdb-Logo" />
-          </Link>
-          <SearchBar />
-          <Header />
-
-          <Route exact={true} path="/" component={MoviesListRecent} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />          
-          <Route exact path="/searchpage" component={MovieSearchList} />
-          <Route exact path="/movieDetails" component={MovieDetails} />  
-        </div>
+          <div className="row">
+            <div className="col-2">
+              <Link to="/" className="link-button">
+                <img src={logo} alt="websiteLogo" className="imdb-Logo"/>
+               </Link> 
+            </div>
+             
+            <SearchBar /> 
+            
+            <div className="col-1 mx-auto w-75 pt-4 mt-1">
+              <Link to="/register" component={ Register }>
+                <div className="div-reg-btn">
+                  <i className="fab fa-500px" data-toggle="tooltip" title="Register">Register</i>
+                </div>
+              </Link>
+            </div>
+            <div className="col-1 mx-auto w-75 pt-4 mt-1">  
+              <Link to="/login" component={ Login }>
+                <div className="div-login-btn">
+                  <i className="far fa-user-circle" data-toggle="tooltip" title="Login">Login</i>
+                </div>
+              </Link>
+            </div>
+          </div>
+        <Header />
+        <Route exact path="/register" component={ Register }/>
+        <Route exact path="/login" component={ Login }/>
+        <Route exact={true} path="/" component={MoviesListRecent} />
+        <Route exact path="/searchpage" component={MovieSearchList} />
+      </div>
       </BrowserRouter>
     ]);
   }
