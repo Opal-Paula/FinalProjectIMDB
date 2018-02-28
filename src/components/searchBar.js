@@ -24,7 +24,7 @@ class SearchBar extends Component {
         this.setState({
             search: e.target.value
         })     
-        this.props.searchMovieAction(this.state.search, this.state.searchVal);     
+        this.props.searchMovieAction();     
     }
     render() {                  
         return (
