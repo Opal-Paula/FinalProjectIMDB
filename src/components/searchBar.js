@@ -45,6 +45,7 @@ class SearchBar extends Component {
             
     }
     render() {   
+        //search movie action trebuie sa se declanseze la click pe lupa
         this.props.searchMovieAction(this.state.search, this.state.searchVal); 
         return (
             <div className="row col">

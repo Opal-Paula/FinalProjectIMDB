@@ -11,7 +11,6 @@ import axios from 'axios';
 const url = 'http://localhost:8000/movies';
 
 export function movieAction(data = '') {
-    console.log('daaaata', data);
     let query = '', type = '';
     switch (data) {
         case 'recent':
@@ -36,10 +35,7 @@ export function movieAction(data = '') {
 export function movieDetails(id) {
     console.log('movie', id);
     const result = axios.get(`${url}/${id}`);
-
-
     console.log('action', result);
-
     return {
         type: 'MOVIE_DETAILS',
         payload: result

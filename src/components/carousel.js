@@ -13,6 +13,7 @@ import {
 
 import DetailsButton from "./detailsBtn";
 
+//used on Homepage to display the first 10 recent movies
 class CarouselMovie extends Component {
     constructor(props) {
         super(props);

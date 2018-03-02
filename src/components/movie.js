@@ -14,7 +14,7 @@ class Movie extends Component {
         super(props);
     }
     render() {
-        console.log(this.props.movie.title);
+        console.log('movie comp props',this.props);
         if (!this.props.movie) {
             return (
                 <div>Loading ...</div>

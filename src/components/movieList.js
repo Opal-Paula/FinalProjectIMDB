@@ -6,6 +6,7 @@ import { movieAction } from "../actions";
 import  CarouselMovie  from "./carousel";
 import Movie from "./movie";
 
+//uses the Movie, Carousel components to know what to display on pages 
 class MovieList extends Component {
     constructor(props) {
         super(props);
