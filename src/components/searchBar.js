@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import {Icon} from 'react-fa';
 
 import { searchMovieAction } from "../actions";
 import {
@@ -48,8 +49,9 @@ class SearchBar extends Component {
         //search movie action trebuie sa se declanseze la click pe lupa
         this.props.searchMovieAction(this.state.search, this.state.searchVal); 
         return (
-            <div className="row col">
+            <div className="row col">                
                 <div className="col-9 pt-3 mt-1">
+                    <Icon name="search"></Icon>
                     <input type="text" 
                         placeholder="Search a movie" 
                         id="txt-input" 
