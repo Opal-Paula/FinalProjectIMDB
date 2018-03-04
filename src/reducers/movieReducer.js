@@ -1,4 +1,4 @@
-import { MOVIE_DATA_RECENT, MOVIE_DATA_ALL, MOVIE_DATA_PAGED } from "../actions/types";
+import { MOVIE_DATA_RECENT, MOVIE_DATA_ALL } from "../actions/types";
 
 export default function movieReducer(state = null, action = {}) {
     switch (action.type) {

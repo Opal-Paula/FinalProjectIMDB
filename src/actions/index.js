@@ -37,7 +37,7 @@ export function movieDetails(id) {
     const result = axios.get(`${url}/${id}`);
     console.log('action', result);
     return {
-        type: 'MOVIE_DETAILS',
+        type: MOVIE_DETAILS,
         payload: result
     }
 }

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import {Icon} from 'react-fa';
 
 import Header from './components/header';
-import Main from './components/main';
 import Register from './components/register';
 import Login from './components/login';
 import SearchBar from "./components/searchBar";
@@ -19,7 +18,7 @@ class App extends React.Component {
   render() {
     return ([
       <BrowserRouter>
-        <div className="container">
+        <div className="container header-main">
           <div className="row">
             <div className="col-2">
               <Link to="/" className="link-button">

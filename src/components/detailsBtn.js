@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import { Button } from 'reactstrap';
 import { movieDetails } from "../actions";
-import MovieDetails from './movieDetails';
 
 //the Details btn shown on all movies. Now examples are on Homepage and Movies
 class DetailsButton extends Component {
-    constructor(props) {
-        super(props);
-    }
     handleClick = (e) => {
         this.props.movieDetails(e.target.getAttribute("data-id"));
     }

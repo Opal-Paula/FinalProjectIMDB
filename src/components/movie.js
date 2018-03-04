@@ -10,9 +10,6 @@ import {
 import DetailsButton from "./detailsBtn";
 
 class Movie extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         console.log('movie comp props',this.props);
         if (!this.props.movie) {
