@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 import MovieList from "./movieList";
 import "./styles.css";
 
-class MovieSearchList extends Component {
+class AllMovies extends Component {
     render() {
         return (
             <div className="container">
-                <h1 className="text-center">Search list</h1>
+                <h1 className="text-center">All Movies</h1>
                 <MovieList tag="all" />
             </div>
         );
     }
 }
 
-export default MovieSearchList;
+export default AllMovies;

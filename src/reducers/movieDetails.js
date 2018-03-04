@@ -1,13 +1,9 @@
 import { MOVIE_DETAILS } from "../actions/types";
 
-
-export default function movieReducer(state = null, action = {}) {
+export default function movieDetailsReducer(state = null, action = {}) {
     switch (action.type) {
         case MOVIE_DETAILS:
-            console.log('movieReducer', action.payload);
-           
-            return "hi";
-        
+            return action.payload.data;        
         default:
             return state;
     }

@@ -1,10 +1,16 @@
-import { MOVIE_DATA_RECENT, MOVIE_DATA_ALL, MOVIE_DATA_PAGED, SEARCH_TITLE } from "./types";
+import {
+MOVIE_DATA_RECENT,
+        MOVIE_DATA_ALL,
+        MOVIE_DATA_PAGED,
+        SEARCH_MOVIE,
+        MOVIE_DETAILS
+        }
+from "./types";
 import axios from 'axios';
 
 const url = 'http://localhost:8000/movies';
 
 export function movieAction(data = '') {
-    console.log('daaaata', data);    
     let query = '', type = '';
     switch (data) {
         case 'recent':
@@ -28,29 +34,20 @@ export function movieAction(data = '') {
 
 export function movieDetails(id) {
     console.log('movie', id);
-    const url =
-        'http://localhost:8000/movies/';
-
-    
-    let type = 'MOVIE_DETAILS';
-   
-    const result = axios.get(`${url}${id}`);
-
-
-    console.log('action',result);
-
+    const result = axios.get(`${url}/${id}`);
+    console.log('action', result);
     return {
         type: 'MOVIE_DETAILS',
         payload: result
     }
 }
 
-export function searchMovieAction(type, data) {
-    console.log(data);
-    const result = axios.get(`${url}`+'?take=40');
-    // console.log('result',result);
+export function searchMovieAction(category = 'take=40', query = '') {
+    console.log('cc', category, query);
+    const result = axios.get(`${url}?${category}=${query}`);
+    console.log('result', result, `${url}?${category}=${query}`);
     return {
-        type: [type, data],
+        type: SEARCH_MOVIE,
         payload: result
     }
 }
