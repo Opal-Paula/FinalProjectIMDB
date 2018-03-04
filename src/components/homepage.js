@@ -17,10 +17,17 @@ class MoviesListRecent extends Component {
             console.log('ll', this.props.moviedetails)
             let mvd = this.props.moviedetails;
             this.movieDetailsData = {
+                Genre: mvd.Genre,
+                Poster: mvd.Poster,
+                Title: mvd.Title,
+                Language: mvd.Language,
+                Country: mvd.Country,
                 Actors: mvd.Actors,
-                Awards: mvd.Awards,
-                BoxOffice: mvd.BoxOffice,
-                Poster: mvd.Poster
+                Plot: mvd.Plot,
+                Year: mvd.Year,
+                Director: mvd.Director,
+                imdbRating: mvd.imdbRating,
+                imdbVotes: mvd.imdbVotes
             }
             return (
                 <div className="container homepage">
