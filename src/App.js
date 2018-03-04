@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import {Icon} from 'react-fa';
+
 import Header from './components/header';
 import Main from './components/main';
 import Register from './components/register';
 import Login from './components/login';
-import MovieDetails from './components/movieDetails';
-import './App.css';
-import logo from './logo.png';
-
 import SearchBar from "./components/searchBar";
+import MovieDetails from './components/movieDetails';
 import MoviesListRecent from "./components/homepage";
 import AllMovies from "./components/allMovies";
 
-
+import logo from './logo.png';
+import './App.css';
 
 class App extends React.Component {
   render() {
@@ -29,17 +29,17 @@ class App extends React.Component {
             <SearchBar /> 
             
             <div className="col-1 mx-auto w-75 pt-4 mt-1">
-              <Link to="/register" component={ Register }>
-                <div className="div-reg-btn">
-                  <i className="fab fa-500px" data-toggle="tooltip" title="Register">Register</i>
-                </div>
+              <Link to="/register">
+                <span className="div-reg-btn">
+                  <Icon name="user-plus" data-toggle="tooltip" title="Register">Register</Icon>
+                </span>
               </Link>
             </div>
             <div className="col-1 mx-auto w-75 pt-4 mt-1">  
-              <Link to="/login" component={ Login }>
-                <div className="div-login-btn">
-                  <i className="far fa-user-circle" data-toggle="tooltip" title="Login">Login</i>
-                </div>
+              <Link to="/login">
+                <span className="div-login-btn">
+                  <Icon name="user-circle" data-toggle="tooltip" title="Login">Login</Icon>
+                </span>
               </Link>
             </div>
           </div>

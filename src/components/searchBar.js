@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Icon } from 'react-fa';
 
 import { searchMovieAction } from "../actions";
 import {
@@ -14,8 +15,8 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem
-   } from 'reactstrap';
-   import './styles.css';
+} from 'reactstrap';
+import './styles.css';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -24,12 +25,12 @@ class SearchBar extends Component {
         this.state = {
             search: "",
             searchVal: "",
-            dropdownOpen: false  
+            dropdownOpen: false
         }
     }
     toggleDropDown() {
         this.setState({
-          dropdownOpen: !this.state.dropdownOpen
+            dropdownOpen: !this.state.dropdownOpen
         });
     }
     onSearchFieldWrite = (e) => {
@@ -38,23 +39,26 @@ class SearchBar extends Component {
         })
     }
     onSearchPick = (e) => {
-        console.log('pick',e.target.value);
+        console.log('pick', e.target.value);
         this.setState({
             search: e.target.value
-        })     
-            
+        })
+
     }
-    render() {   
+    render() {
         //search movie action trebuie sa se declanseze la click pe lupa
-        this.props.searchMovieAction(this.state.search, this.state.searchVal); 
+        this.props.searchMovieAction(this.state.search, this.state.searchVal);
         return (
             <div className="row col">
-                <div className="col-9 pt-3 mt-1">
-                    <input type="text" 
-                        placeholder="Search a movie" 
-                        id="txt-input" 
-                        className="search_input"
-                        onChange={this.onSearchFieldWrite} 
+                <div className="col-9 pt-3 mt-1 row">
+                    <Button color="secondary" size="md" className="loop col-2">
+                        <Icon name="search" size="2x"></Icon>
+                    </Button>
+                    <input type="text"
+                        placeholder="Search a movie"
+                        id="txt-input"
+                        className="search_input col-10"
+                        onChange={this.onSearchFieldWrite}
                         aria-label="Text input with dropdown button" />
                 </div>
                 <div className="col-3 pt-4 mt-1">
@@ -66,13 +70,13 @@ class SearchBar extends Component {
                         <option value="Language">Language</option>
                         <option value="Country">Country</option>
                         <option value="Poster">Poster</option>
-                        <option value="imdbRating">Imdb Rating</option>                    
+                        <option value="imdbRating">Imdb Rating</option>
                         <option value="imdbVotes">Imdb Votes</option>
                         <option value="imdbID">Imdb ID</option>
                         <option value="Type">Type</option>
                     </select>
                 </div>
-            </div>            
+            </div>
         );
     }
 }
