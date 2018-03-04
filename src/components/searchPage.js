@@ -6,10 +6,6 @@ import { searchMovieAction } from "../actions";
 import Movie from "./movie.js"
 
 class SearchPage extends Component {
-    constructor(props) {
-        super(props);
-        console.log('pwp', props);
-    }
     render() {
         this.show = <div>Result not found for {this.props.location.search.replace(/([?])/, '')}</div>;
         if (this.props.search.length > 0) {
@@ -48,4 +44,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
-// export default SearchPage;

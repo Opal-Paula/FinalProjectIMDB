@@ -37,20 +37,17 @@ class SearchBar extends Component {
         })
     }
     onSearchPick = (e) => {
-        console.log('pick', e.target.value);
         this.setState({
             search: e.target.value
         })
-
     }
     onSearchSubmit = (e) => {
-        console.log(e.target, this.state.search.length);  
-        if (this.state.search.length > 0) {               
+        if (this.state.search.length > 0) {
             this.props.searchMovieAction(this.state.search, this.state.searchVal);
-        } 
-        if(!document.querySelector('.search_input').value) {
+        }
+        if (!document.querySelector('.search_input').value) {
             document.querySelector('.header-main').prepend(this.a);
-        } else if (document.querySelector('.msg-search')) {            
+        } else if (document.querySelector('.msg-search')) {
             document.querySelector('.msg-search').remove();
         }
         document.querySelector('.search_input').value = '';
@@ -80,7 +77,7 @@ class SearchBar extends Component {
                 </div>
                 <div className="col-3 pt-4 mt-1">
                     <select className="select-search-option" onChange={this.onSearchPick}>
-                        <option value="select value">Please select an option</option>
+                        <option value="">Please select an option</option>
                         <option value="Title">Title</option>
                         <option value="Year">Year</option>
                         <option value="Runtime">Runtime</option>

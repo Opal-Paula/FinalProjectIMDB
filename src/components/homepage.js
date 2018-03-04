@@ -8,10 +8,6 @@ import MovieDetails from "./movieDetails";
 import "./home.css";
 
 class MoviesListRecent extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         if (this.props.moviedetails) {
             console.log('ll', this.props.moviedetails)
