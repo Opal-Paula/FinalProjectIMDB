@@ -4,18 +4,7 @@ import { bindActionCreators } from "redux";
 import { Icon } from 'react-fa';
 
 import { searchMovieAction } from "../actions";
-import {
-    InputGroup,
-    InputGroupAddon,
-    InputGroupButtonDropdown,
-    InputGroupDropdown,
-    Input,
-    Button,
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-} from 'reactstrap';
+import { Button } from 'reactstrap';
 import './styles.css';
 
 class SearchBar extends Component {
@@ -45,13 +34,15 @@ class SearchBar extends Component {
         })
 
     }
-    render() {
-        //search movie action trebuie sa se declanseze la click pe lupa
+    onSearchSubmit = (e) => {
+        console.log(e.target);
         this.props.searchMovieAction(this.state.search, this.state.searchVal);
+    }
+    render() {
         return (
             <div className="row col">
                 <div className="col-9 pt-3 mt-1 row">
-                    <Button color="secondary" size="md" className="loop col-2">
+                    <Button color="secondary" size="md" className="loop col-2" onClick={this.onSearchSubmit}>
                         <Icon name="search" size="2x"></Icon>
                     </Button>
                     <input type="text"

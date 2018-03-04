@@ -10,6 +10,7 @@ import SearchBar from "./components/searchBar";
 import MovieDetails from './components/movieDetails';
 import MoviesListRecent from "./components/homepage";
 import AllMovies from "./components/allMovies";
+import SearchPage from "./components/searchPage";
 
 import logo from './logo.png';
 import './App.css';
@@ -49,6 +50,8 @@ class App extends React.Component {
         <Route exact={true} path="/" component={ MoviesListRecent } />
         <Route exact path="/movies" component={ AllMovies } />
         <Route exact path="/movie" component={ MovieDetails } />
+
+        <Route path="/searchpage" component={ SearchPage }/>
       </div>
       </BrowserRouter>
     ]);
