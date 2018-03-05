@@ -27,7 +27,7 @@ class MoviesListRecent extends Component {
             }
             return (
                 <div className="container homepage">
-                    <h1 className="text-center">Top 10 recent movies</h1>
+                    <h1 className="text-center lead">Swipe and choose a movie</h1>
                     <MovieList tag="recent" />
                     <MovieDetails movie={this.movieDetailsData} />
                 </div>
@@ -36,7 +36,7 @@ class MoviesListRecent extends Component {
         }
         return (
             <div className="container homepage">
-                <h1 className="text-center">Top 10 recent movies</h1>
+                <h1 className="text-center">Swipe and choose a movie</h1>
                 <MovieList tag="recent" />
             </div>
         );

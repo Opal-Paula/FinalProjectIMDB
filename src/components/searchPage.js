@@ -7,7 +7,7 @@ import Movie from "./movie.js"
 
 class SearchPage extends Component {
     render() {
-        this.show = <div>Result not found for {this.props.location.search.replace(/([?])/, '')}</div>;
+        this.show = <div className="lead">Result not found for {this.props.location.search.replace(/([?])/, '')}</div>;
         if (this.props.search.length > 0) {
             let movieDataGeneral = this.props.search.map(
                 movie => ({ 

@@ -5,7 +5,7 @@ import './header.css';
 class Header extends Component {
     render () {
         return (
-            <nav className="nav-bar">
+            <nav className="nav-bar navbar-nav ml-auto lead">
                 <div className="nav-container">
                     <ul>
                         <li><Link to="/" className="link-button">Home</Link></li>
