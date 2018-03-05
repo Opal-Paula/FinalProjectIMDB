@@ -22,20 +22,20 @@ class App extends React.Component {
           <div className="row">
             <div className="col-2">
               <Link to="/" className="link-button">
-                <img src={logo} alt="websiteLogo" className="imdb-Logo"/>
+                <img src={logo} alt="websiteLogo" className="img-fluid"/>
                </Link> 
             </div>
              
             <SearchBar /> 
             
-            <div className="col-1 mx-auto w-75 pt-4 mt-1">
+            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">
               <Link to="/register">
                 <span className="div-reg-btn">
                   <Icon name="user-plus" data-toggle="tooltip" title="Register">Register</Icon>
                 </span>
               </Link>
             </div>
-            <div className="col-1 mx-auto w-75 pt-4 mt-1">  
+            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">  
               <Link to="/login">
                 <span className="div-login-btn">
                   <Icon name="user-circle" data-toggle="tooltip" title="Login">Login</Icon>

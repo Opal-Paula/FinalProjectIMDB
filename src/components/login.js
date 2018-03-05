@@ -7,11 +7,10 @@ import './login.css';
 class Login extends React.Component{
     render() {
         return(
-            <div className="login-container">
+            <div className="login-container lead">
                 <h1>Sign in</h1>
             
                 <Form>
-                
                     <FormGroup>
                         <Label for="email">Email</Label>
                         <Input type="email" name="email" id="email"/>
