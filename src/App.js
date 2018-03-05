@@ -20,7 +20,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="container header-main">
           <div className="row">
-            <div className="col-2">
+            <div className="col-12 col-md-4 col-lg-2">
               <Link to="/" className="link-button">
                 <img src={logo} alt="websiteLogo" className="img-fluid"/>
                </Link> 
@@ -28,14 +28,14 @@ class App extends React.Component {
              
             <SearchBar /> 
             
-            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">
+            <div className="col-2 col-md-6 col-lg-2 mx-auto pt-4 mt-1  lead">
               <Link to="/register">
                 <span className="div-reg-btn">
                   <Icon name="user-plus" data-toggle="tooltip" title="Register">Register</Icon>
                 </span>
               </Link>
             </div>
-            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">  
+            <div className="col-3 col-md-2 col-lg-2 mx-auto  pt-4 mt-1 lead">  
               <Link to="/login">
                 <span className="div-login-btn">
                   <Icon name="user-circle" data-toggle="tooltip" title="Login">Login</Icon>
