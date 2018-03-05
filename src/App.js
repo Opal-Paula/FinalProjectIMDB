@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import {Icon} from 'react-fa';
+import { Icon } from 'react-fa';
 
 import Header from './components/header';
 import Register from './components/register';
@@ -18,17 +18,17 @@ import './App.css';
 class App extends React.Component {
   render() {
     return ([
-      <BrowserRouter>
+      <BrowserRouter key="3">
         <div className="container header-main">
           <div className="row">
             <div className="col-2">
               <Link to="/" className="link-button">
-                <img src={logo} alt="websiteLogo" className="img-fluid"/>
-               </Link> 
+                <img src={logo} alt="websiteLogo" className="img-fluid" />
+              </Link>
             </div>
-             
-            <SearchBar /> 
-            
+
+            <SearchBar />
+
             <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">
               <Link to="/register">
                 <span className="div-reg-btn">
@@ -36,7 +36,7 @@ class App extends React.Component {
                 </span>
               </Link>
             </div>
-            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">  
+            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">
               <Link to="/login">
                 <span className="div-login-btn">
                   <Icon name="user-circle" data-toggle="tooltip" title="Login">Login</Icon>
@@ -44,16 +44,16 @@ class App extends React.Component {
               </Link>
             </div>
           </div>
-        <Header />
-        <Route exact path="/register" component={ Register }/>
-        <Route exact path="/login" component={ Login }/>
-        <Route exact={true} path="/" component={ MoviesListRecent } />
-        <Route exact path="/movies" component={ AllMovies } />
-        <Route exact path="/movie" component={ MovieDetails } />
+          <Header />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact={true} path="/" component={MoviesListRecent} />
+          <Route exact path="/movies" component={AllMovies} />
+          <Route exact path="/movie" component={MovieDetails} />
 
-        <Route path="/searchpage" component={ SearchPage }/>
-        <Route path="/details" component={ SearchPage }/>
-      </div>
+          <Route path="/searchpage" component={SearchPage} />
+          <Route path="/details" component={DetailsPage} />
+        </div>
       </BrowserRouter>
     ]);
   }

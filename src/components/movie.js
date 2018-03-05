@@ -11,7 +11,7 @@ import DetailsButton from "./detailsBtn";
 
 class Movie extends Component {
     render() {
-        console.log('movie comp props',this.props);
+        // console.log('movie comp props',this.props);
         if (!this.props.movie) {
             return (
                 <div>Loading ...</div>

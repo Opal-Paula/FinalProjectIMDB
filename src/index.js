@@ -11,8 +11,8 @@ import rootReducer from "./reducers";
 const myStore = createStore( rootReducer, {}, applyMiddleware(ReduxPromise));
 
 ReactDOM.render(
-    <Provider store={myStore} >
-        <App />
+    <Provider store={myStore} key="1" >
+        <App key="2" />
     </Provider>,
     document.getElementById('root')
 );

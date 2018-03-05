@@ -3,7 +3,6 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import './login.css';
 
-
 class Login extends React.Component{
     render() {
         return(

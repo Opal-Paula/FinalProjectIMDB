@@ -33,9 +33,9 @@ export function movieAction(data = '') {
 }
 
 export function movieDetails(id) {
-    console.log('movie', id);
+    // console.log('movie', id);
     const result = axios.get(`${url}/${id}`);
-    console.log('action', result);
+    // console.log('action', result);
     return {
         type: MOVIE_DETAILS,
         payload: result
@@ -43,9 +43,9 @@ export function movieDetails(id) {
 }
 
 export function searchMovieAction(category = 'take=40', query = '') {
-    console.log('cc', category, query);
+    // console.log('cc', category, query);
     const result = axios.get(`${url}?${category}=${query}`);
-    console.log('result', result, `${url}?${category}=${query}`);
+    // console.log('result', result, `${url}?${category}=${query}`);
     return {
         type: SEARCH_MOVIE,
         payload: result

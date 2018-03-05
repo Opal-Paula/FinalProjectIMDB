@@ -12,18 +12,23 @@ class DetailsButton extends Component {
         this.props.movieDetails(e.target.getAttribute("data-id"));
     }
     render() {
-        return (
-            <Link className="col-2" to={{
-                pathname: '/details',
-                search: `?${this.props.item}`
-            }}>
-                <Button
-                    color="secondary"
-                    data-id={this.props.item}
-                    className={this.props.cs}
-                    onClick={this.handleClick.bind(this)}>Details</Button>
-            </Link>
-        );
+        this.btn = <Button
+        color="secondary"
+        data-id={this.props.item}
+        className={this.props.cs}
+        onClick={this.handleClick.bind(this)}>Details</Button>;
+        if (window.location.pathname === "/") {
+            return (this.btn);
+        } else {
+            return (
+                <Link to={{
+                    pathname: '/details',
+                    search: `?${this.props.item}`
+                }}>
+                   {this.btn}
+                </Link>
+            );
+        }
     }
 }
 

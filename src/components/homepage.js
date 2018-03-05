@@ -10,7 +10,6 @@ import "./home.css";
 class MoviesListRecent extends Component {
     render() {
         if (this.props.moviedetails) {
-            console.log('ll', this.props.moviedetails)
             let mvd = this.props.moviedetails;
             this.movieDetailsData = {
                 Genre: mvd.Genre,
