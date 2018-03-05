@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
 
 import { Button } from 'reactstrap';
 import { movieDetails } from "../actions";
@@ -12,11 +13,16 @@ class DetailsButton extends Component {
     }
     render() {
         return (
-            <Button
-                color="secondary"
-                data-id={this.props.item}
-                className={this.props.cs}
-                onClick={this.handleClick.bind(this)}>Details</Button>
+            <Link className="col-2" to={{
+                pathname: '/details',
+                search: `?${this.props.item}`
+            }}>
+                <Button
+                    color="secondary"
+                    data-id={this.props.item}
+                    className={this.props.cs}
+                    onClick={this.handleClick.bind(this)}>Details</Button>
+            </Link>
         );
     }
 }
