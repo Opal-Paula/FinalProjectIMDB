@@ -28,14 +28,14 @@ class App extends React.Component {
              
             <SearchBar /> 
             
-            <div className="col-4 col-md-6 col-lg-9 lead div-reg-btn">
+            <div className="col-4 col-md-6 col-lg-1 lead div-reg-btn">
               <Link to="/register">
                 <span className="">
                   <Icon name="user-plus" data-toggle="tooltip" title="Register">Register</Icon>
                 </span>
               </Link>
             </div>
-            <div className="col-3 col-md-3 col-lg-2 lead div-login-btn">  
+            <div className="col-3 col-md-3 col-lg-1 lead div-login-btn">  
               <Link to="/login">
                 <span className="">
                   <Icon name="user-circle" data-toggle="tooltip" title="Login">Login</Icon>

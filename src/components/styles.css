@@ -21,6 +21,12 @@
     .search_input{margin-bottom: 10px;margin-top:2px}
 }
 
+@media (min-width: 992px) {
+    .div-btn-input{margin-bottom: 12px}
+    .drop-option{margin-top: 23px}
+    .search_input{margin-top: 2px;}
+  }
+
 @media (max-width: 540px ) {
     .drop-option{margin-left: 72px;padding-top: 15px;}
     .div-btn-input{margin-top: 20px;margin-right: 20px;}

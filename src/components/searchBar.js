@@ -58,7 +58,7 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <div className="row search col-12 col-md-9 col-lg-9">
+            <div className="row search col-12 col-md-9 col-lg-8">
                 <div className="col-12 col-md-9 col-lg-9 row div-btn-input">
                     <Link className="col-4 col-md-3 col-lg-2" to={{
                         pathname: '/searchpage',
@@ -71,7 +71,7 @@ class SearchBar extends Component {
                     <input type="text"
                         placeholder="Search a movie"
                         id="txt-input"
-                        className="search_input col-8 col-md-8 col-lg-6 lead form-control "
+                        className="search_input col-8 col-md-8 col-lg-10 lead form-control "
                         onChange={this.onSearchFieldWrite}
                         aria-label="Text input with dropdown button" />    
                 </div>
