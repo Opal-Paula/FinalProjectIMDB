@@ -9,30 +9,7 @@ import "./home.css";
 
 class MoviesListRecent extends Component {
     render() {
-        if (this.props.moviedetails) {
-            let mvd = this.props.moviedetails;
-            this.movieDetailsData = {
-                Genre: mvd.Genre,
-                Poster: mvd.Poster,
-                Title: mvd.Title,
-                Language: mvd.Language,
-                Country: mvd.Country,
-                Actors: mvd.Actors,
-                Plot: mvd.Plot,
-                Year: mvd.Year,
-                Director: mvd.Director,
-                imdbRating: mvd.imdbRating,
-                imdbVotes: mvd.imdbVotes
-            }
-            return (
-                <div className="container homepage">
-                    <h1 className="text-center lead">Swipe and choose a movie</h1>
-                    <MovieList tag="recent" />
-                    <MovieDetails movie={this.movieDetailsData} />
-                </div>
 
-            )
-        }
         return (
             <div className="container homepage">
                 <h1 className="text-center">Swipe and choose a movie</h1>
@@ -42,19 +19,7 @@ class MoviesListRecent extends Component {
 
     }
 
-
-}
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ movieDetails }, dispatch);
-}
-
-function mapStateToProps(state) {
-    return {
-        moviedetails: state.moviedetails
-    };
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(MoviesListRecent);
-
+export default MoviesListRecent;
