@@ -47,3 +47,4 @@
 .team-name {display: block;}
 .team-row {margin: 5px 0;}
 .team-link{display: block; text-align: center;}
+.clearfix {display: block; clear: both;}

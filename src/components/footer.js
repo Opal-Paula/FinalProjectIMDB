@@ -23,7 +23,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="clearfix">
                 <Container>
                     <Row>
                         <Col xs="12">
