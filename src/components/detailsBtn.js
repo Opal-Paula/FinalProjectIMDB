@@ -13,22 +13,19 @@ class DetailsButton extends Component {
     }
     render() {
         this.btn = <Button
-        color="secondary"
-        data-id={this.props.item}
-        className={this.props.cs}
-        onClick={this.handleClick.bind(this)}>Details</Button>;
-        if (window.location.pathname === "/") {
-            return (this.btn);
-        } else {
-            return (
-                <Link to={{
-                    pathname: '/details',
-                    search: `?${this.props.item}`
-                }}>
-                   {this.btn}
-                </Link>
-            );
-        }
+            color="secondary"
+            data-id={this.props.item}
+            className={this.props.cs}
+            onClick={this.handleClick.bind(this)}>Details</Button>;
+        return (
+            <Link to={{
+                pathname: '/details',
+                search: `?${this.props.item}`
+            }}>
+                {this.btn}
+            </Link>
+        );
+
     }
 }
 
