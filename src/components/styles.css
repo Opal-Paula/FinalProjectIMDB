@@ -10,14 +10,25 @@
 
 @media (min-width: 992px) {
     .img-search {min-height: 350px;}
+    .div-btn-input {margin-top:15px;}
+    .drop-option {margin-top:30px;}
 }
-@media (max-width: 991px) and (min-width: 576px) {
+
+@media (max-width: 991px) and (min-width: 541px) {
     .img-search {min-height: 500px;}
+    .drop-option {padding-top: 20px;padding-right:10px}
+    .div-btn-input{margin-top: 12px}
+    .search_input{margin-bottom: 10px;margin-top:2px}
+}
+
+@media (max-width: 540px ) {
+    .drop-option{margin-left: 72px;padding-top: 15px;}
+    .div-btn-input{margin-top: 20px;margin-right: 20px;}
 }
 
 .search_input, .select-search-option {
     width: 100%;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .search_input {

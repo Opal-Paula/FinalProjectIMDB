@@ -58,9 +58,9 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <div className="row search">
-                <div className="col-12 col-md-12 pt-2 mt-1 row">
-                    <Link className="col-3 col-md-3 col-lg-3" to={{
+            <div className="row search col-12 col-md-9 col-lg-9">
+                <div className="col-12 col-md-9 col-lg-9 row div-btn-input">
+                    <Link className="col-4 col-md-3 col-lg-2" to={{
                         pathname: '/searchpage',
                         search: `?${this.state.search}=${this.state.searchVal}`
                     }}>
@@ -71,13 +71,13 @@ class SearchBar extends Component {
                     <input type="text"
                         placeholder="Search a movie"
                         id="txt-input"
-                        className="search_input col-8 col-md-8 col-lg-8 lead form-control "
+                        className="search_input col-8 col-md-8 col-lg-6 lead form-control "
                         onChange={this.onSearchFieldWrite}
                         aria-label="Text input with dropdown button" />    
                 </div>
-                <div className="col-10 col-md-5 col-lg-5 pt-4 pr-1 mt-1">
+                <div className="col-8 col-md-3 col-lg-3 drop-option">
                     <select className="select-search-option lead" onChange={this.onSearchPick}>
-                        <option value="">Search by tag</option>
+                        <option value="">Search</option>
                         <option value="Title">Title</option>
                         <option value="Year">Year</option>
                         <option value="Runtime">Runtime</option>
