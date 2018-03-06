@@ -58,26 +58,26 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <div className="row col-md-8 search">
-                <div className="col-9 pt-2 mt-1 row">
-                    <Link className="col-lg-2 col-sm-4" to={{
+            <div className="row search col-12 col-md-9 col-lg-8">
+                <div className="col-12 col-md-9 col-lg-9 row div-btn-input">
+                    <Link className="col-4 col-md-3 col-lg-2" to={{
                         pathname: '/searchpage',
                         search: `?${this.state.search}=${this.state.searchVal}`
                     }}>
-                        <Button color="secondary" size="md" className="loop col-12 " onClick={this.onSearchSubmit}>
-                            <Icon name="search" size="2x"></Icon>
+                        <Button color="secondary" size="md" className="loop" onClick={this.onSearchSubmit}>
+                            <Icon name="search" size="2x" className=""></Icon>
                         </Button>
                     </Link>
                     <input type="text"
                         placeholder="Search a movie"
                         id="txt-input"
-                        className="search_input col-lg-10 lead form-control "
+                        className="search_input col-8 col-md-8 col-lg-10 lead form-control "
                         onChange={this.onSearchFieldWrite}
-                        aria-label="Text input with dropdown button" />
+                        aria-label="Text input with dropdown button" />    
                 </div>
-                <div className="col-lg-3 col-s-2 pt-4 mt-1">
+                <div className="col-8 col-md-3 col-lg-3 drop-option">
                     <select className="select-search-option lead" onChange={this.onSearchPick}>
-                        <option value="">Search by tag</option>
+                        <option value="">Search</option>
                         <option value="Title">Title</option>
                         <option value="Year">Year</option>
                         <option value="Runtime">Runtime</option>
@@ -91,6 +91,7 @@ class SearchBar extends Component {
                         <option value="Type">Type</option>
                     </select>
                 </div>
+                
             </div>
         );
     }

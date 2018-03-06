@@ -22,24 +22,24 @@ class App extends React.Component {
       <BrowserRouter key="3">
         <div className="container header-main">
           <div className="row">
-            <div className="col-2">
+            <div className="col-12 col-md-3 col-lg-2">
               <Link to="/" className="link-button">
                 <img src={logo} alt="websiteLogo" className="img-fluid" />
               </Link>
             </div>
-
-            <SearchBar />
-
-            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">
+             
+            <SearchBar /> 
+            
+            <div className="col-4 col-md-6 col-lg-1 lead div-reg-btn">
               <Link to="/register">
-                <span className="div-reg-btn">
+                <span className="">
                   <Icon name="user-plus" data-toggle="tooltip" title="Register">Register</Icon>
                 </span>
               </Link>
             </div>
-            <div className="col-1 mx-auto w-75 pt-4 mt-1 lead">
+            <div className="col-3 col-md-3 col-lg-1 lead div-login-btn">  
               <Link to="/login">
-                <span className="div-login-btn">
+                <span className="">
                   <Icon name="user-circle" data-toggle="tooltip" title="Login">Login</Icon>
                 </span>
               </Link>
