@@ -27,6 +27,3 @@
 .select-search-option {
     padding: 3px;
 }
-.team-name {display: block;}
-.team-row {margin: 5px 0;}
-.team-link{display: block; text-align: center;}

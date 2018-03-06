@@ -11,7 +11,6 @@ import MoviesListRecent from "./components/homepage";
 import AllMovies from "./components/allMovies";
 import SearchPage from "./components/searchPage";
 import DetailsPage from "./components/detailsPage";
-import Footer from "./components/footer";
 
 import logo from './logo.png';
 import './App.css';
@@ -45,7 +44,7 @@ class App extends React.Component {
               </Link>
             </div>
           </div>
-          <Header />          
+          <Header />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Route exact={true} path="/" component={MoviesListRecent} />
@@ -54,9 +53,8 @@ class App extends React.Component {
 
           <Route path="/searchpage" component={SearchPage} />
           <Route path="/details" component={DetailsPage} />
-        </div>        
-      </BrowserRouter>,
-      <Footer key="4" />
+        </div>
+      </BrowserRouter>
     ]);
   }
 }
