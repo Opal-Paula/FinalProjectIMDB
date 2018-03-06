@@ -3,9 +3,7 @@
 .row-movies-recent {justify-content: center; min-height: 450px;}
 .poster {width: 90%;}
 .carousel-inner .carousel-caption {bottom: 0; top: 20%; }
-.btn-mv {position: absolute; width: calc(100% - 30px); z-index: 10;} 
-.add-recent {top: 70%;}
-.btn-details {top: 60%;}
+
 
 .text-center {
     padding: 5px;
@@ -14,4 +12,9 @@
 
 .container {
     margin: 0;
+}
+@media (min-width: 720px) {
+    .btn-mv {position: absolute; width: calc(100% - 30px); z-index: 10;} 
+    .add-recent {top: 70%;}
+    .btn-details {top: 60%;}
 }

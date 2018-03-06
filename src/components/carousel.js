@@ -65,10 +65,10 @@ class CarouselMovie extends Component {
                     key={item.id}
                 >
                     <Row className="row-movies-recent">
-                        <Col sm="4" md="6" lg="4">
+                        <Col xs="9" sm="6" md="6" lg="4">
                             <img className="poster" src={item.src} alt={item.altText} />
                         </Col>
-                        <Col sm="4" md="4" lg="4">
+                        <Col xs="9" sm="9" md="4" lg="4">
                             <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
                             <DetailsButton item={item.id} cs={'btn-mv btn-details'} />
                             <Button color="primary" data-id={item.id} className="btn-mv add-recent">Add to collection</Button>
